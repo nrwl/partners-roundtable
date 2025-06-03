@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nx Partners Roundtable</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            overflow: hidden;
+        }
+        
+        .slideshow-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slide {
+            display: none;
+            width: 90%;
+            max-width: 1200px;
+            height: 85vh;
+            padding: 60px 80px;
+            text-align: left;
+            position: relative;
+            animation: fadeIn 0.3s ease-in-out;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        
+        .slide.title-slide {
+            justify-content: center;
+            text-align: center;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Nx Brand Colors - Based on nx.dev website */
+        .nx-primary { color: #143055; } /* Nx primary blue */
+        .nx-secondary { color: #1e293b; } /* Nx dark blue */
+        .nx-accent { color: #0891b2; } /* Nx cyan accent */
+        .nx-light { color: #38bdf8; } /* Light blue */
+        
+        .slide h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #143055;
+            line-height: 1.2;
+        }
+        
+        .slide h2 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: #143055;
+            border-bottom: 3px solid #0891b2;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .slide h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        
+        .slide p, .slide li {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+            color: #334155;
+        }
+        
+        .slide ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .slide li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            color: #64748b;
+            font-weight: 400;
+            margin-bottom: 3rem;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .feature-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+        }
+        
+        .feature-card:hover {
+            border-color: #0891b2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(8, 145, 178, 0.1);
+        }
+        
+        .feature-card h3 {
+            color: #143055;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+        
+        .feature-card p {
+            color: #475569;
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #eff6ff, #f0f9ff);
+            border-left: 4px solid #0891b2;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .security-alert {
+            background: linear-gradient(135deg, #fef2f2, #fdf2f8);
+            border-left: 4px solid #dc2626;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .security-alert h3 {
+            color: #dc2626;
+            margin-bottom: 0.75rem;
+        }
+        
+        .video-link {
+            display: inline-flex;
+            align-items: center;
+            background: #0891b2;
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .video-link:hover {
+            background: #0e7490;
+            transform: translateY(-1px);
+        }
+        
+        .discussion-section {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .discussion-section h3 {
+            color: #143055;
+            margin-bottom: 1rem;
+        }
+        
+        .discussion-points {
+            background: #ffffff;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .discussion-points ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .discussion-points li {
+            background: #ffffff;
+            border-left: 3px solid #0891b2;
+            padding: 1rem 1.5rem;
+            margin: 0.75rem 0;
+            border-radius: 0 6px 6px 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+        
+        .discussion-points li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+        
+        .controls {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            z-index: 1000;
+        }
+        
+        .btn {
+            background: #143055;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .btn:hover {
+            background: #1e293b;
+            transform: translateY(-1px);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .slide-counter {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: #f1f5f9;
+            color: #143055;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .logo {
+            position: absolute;
+            left: 1rem;
+            height: 100px;
+            width: auto;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+        
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .support-card {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        
+        .support-card:hover {
+            border-color: #0891b2;
+            box-shadow: 0 4px 12px rgba(8, 145, 178, 0.1);
+        }
+        
+        .support-card h4 {
+            color: #143055;
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .support-card p {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-bottom: 0;
+        }
+        
+        .incentives-section {
+            background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+            border: 2px solid #22c55e;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .incentives-section h3 {
+            color: #15803d;
+            margin-bottom: 1rem;
+        }
+        
+        .incentive-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .incentive-item {
+            background: white;
+            padding: 1.25rem;
+            border-radius: 6px;
+            border: 1px solid #bbf7d0;
+        }
+        
+        .incentive-item h4 {
+            color: #15803d;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .slide {
+                padding: 2rem 1.5rem;
+                width: 95%;
+            }
+            
+            .slide h1 {
+                font-size: 2.25rem;
+            }
+            
+            .slide h2 {
+                font-size: 1.875rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .incentive-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="../../logo.png" alt="Nx Logo" style="height: 100px; width: auto;" />
+    </div>
+    <div class="slide-counter">
+        <span id="current-slide">1</span> / <span id="total-slides">8</span>
+    </div>
+    
+    <div class="slideshow-container">
+        <!-- Slide 1: Welcome -->
+        <div class="slide active title-slide">
+            <h1>Nx Partners Roundtable</h1>
+            <div class="highlight-box">
+                <h3>Today's Focus</h3>
+                <p>Product updates, partnership strategies, collect feedback</p>
+            </div>
+        </div>
+        
+        <!-- Slide 2: Product Updates Overview -->
+        <div class="slide">
+            <h2>Product Updates & Roadmap</h2>
+            <p>Key developments that strengthen our value proposition</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Nx 21</h3>
+                    <p>Latest innovations in developer experience with Continuous Tasks and Terminal UI improvements</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Polyrepo Features</h3>
+                    <p>Expanding Nx capabilities beyond traditional monorepo setups</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Security Updates</h3>
+                    <p>Critical CVE vulnerability addressed in self-hosted remote cache systems</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 3: Nx 21 Features -->
+        <div class="slide">
+            <h2>Nx 21 Highlights</h2>
+            <p>Game-changing features for enterprise development teams</p>
+            
+            <div class="two-column">
+                <div>
+                    <h3>Continuous Tasks</h3>
+                    <ul>
+                        <li>Streamlined development workflows</li>
+                        <li>Persistent task execution</li>
+                        <li>Reduced context switching</li>
+                        <li>Enhanced developer productivity</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Terminal UI</h3>
+                    <ul>
+                        <li>Intuitive command-line interface</li>
+                        <li>Visual task progress tracking</li>
+                        <li>Improved debugging experience</li>
+                        <li>Better error reporting</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <p><strong>Business Impact:</strong> Measurable improvements in developer velocity and satisfaction, leading to faster time-to-market for customer projects</p>
+            </div>
+        </div>
+        
+        <!-- Slide 4: Security Update -->
+        <div class="slide">
+            <h2>Security Update</h2>
+            <p>Demonstrating our commitment to enterprise security standards</p>
+            
+            <div class="security-alert">
+                <h3>CVE Security Update</h3>
+                <p>We've proactively addressed a critical vulnerability in self-hosted remote cache systems. This demonstrates our commitment to enterprise security standards and rapid response to potential threats.</p>
+                <a href="https://youtu.be/687Bgs1UMog" class="video-link" target="_blank">
+                    🎥 Watch Technical Breakdown
+                </a>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Key Points for Customers</h3>
+                <ul>
+                    <li>TODO</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Slide 5: Polyrepo Features -->
+        <div class="slide">
+            <h2>New Polyrepo Features</h2>
+            <p>Expanding beyond monorepos to meet teams where they are</p>
+            
+            <div class="highlight-box">
+                <h3>Market Opportunity</h3>
+                <p>Supporting teams who aren't ready for full monorepo adoption but want to benefit from Nx tooling and CI optimization</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>TODO</h3>
+                    <p>TODO</p>
+                </div>
+                <!-- <div class="feature-card">
+                    <h3>Cross-Repository Task Coordination</h3>
+                    <p>Orchestrate builds and tasks across multiple repositories with intelligent dependency management</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Unified Caching</h3>
+                    <p>Share cache artifacts across repositories to accelerate CI/CD pipelines organization-wide</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Consistent Tooling</h3>
+                    <p>Standardize development tools, linting, and testing across all repositories in your organization</p>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- Slide 6: Partnership Support -->
+        <div class="slide">
+            <h2>How We Can Support You</h2>
+            <p>Concrete ways we're expanding partner enablement</p>
+            
+            <div class="support-grid">
+                <div class="support-card">
+                    <h4>Strategy Sessions</h4>
+                    <p>Joint customer meetings, insights sharing, and experience exchange for complex deals</p>
+                </div>
+                <div class="support-card">
+                    <h4>Technical Demos</h4>
+                    <p>Nx team-led Nx Cloud demonstrations for qualified prospects</p>
+                </div>
+                <div class="support-card">
+                    <h4>POV Process</h4>
+                    <p>Structured proof-of-value approach for customers with defined pain points</p>
+                </div>
+            </div>
+            
+            <div class="incentives-section">
+                <h3>New Partnership Opportunities</h3>
+                <div class="incentive-items">
+                    <div class="incentive-item">
+                        <h4>Enhanced Commission Incentives</h4>
+                        <p>Improved partner reward structure for Nx Cloud deals</p>
+                    </div>
+                    <div class="incentive-item">
+                        <h4>Internal Nx Cloud Accounts</h4>
+                        <p>Free accounts for your team projects (rolling out over the next few weeks)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 7: Sales Challenges Discussion -->
+        <div class="slide">
+            <h2>Discussion: Sales Challenges</h2>
+            <p>Let's identify where we can better support your efforts</p>
+            
+            <div class="discussion-section">
+                <h3>Key Questions for Discussion</h3>
+                <div class="discussion-points">
+                    <ul>
+                        <li><strong>What challenges are you facing when selling Nx and Nx Cloud?</strong><br>
+                        <small>Technical objections, pricing concerns, competition, etc.</small></li>
+                        
+                        <li><strong>How can we help you convince customers to adopt monorepos?</strong><br>
+                        <small>What resources, case studies, or support do you need?</small></li>
+                        
+                        <li><strong>What objections do you hear most frequently?</strong><br>
+                        <small>Migration complexity, team training, organizational resistance?</small></li>
+                        
+                        <li><strong>Where do you need more support or resources?</strong><br>
+                        <small>Technical demos, documentation, training materials?</small></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 8: Open Discussion -->
+        <div class="slide">
+            <h2>Open Q&A & Feedback</h2>
+            <p>Your insights drive our roadmap and partnership strategy</p>
+            
+            <div class="discussion-section">
+                <h3>Areas for Discussion</h3>
+                <div class="discussion-points">
+                    <ul>
+                        <li><strong>Product Features & Roadmap</strong><br>
+                        <small>What features would help you close more deals? Any missing capabilities?</small></li>
+                        
+                        <li><strong>Partner Program Improvements</strong><br>
+                        <small>How can we enhance support, training, or incentive structures?</small></li>
+                        
+                        <li><strong>Sales & Marketing Resources</strong><br>
+                        <small>What tools, collateral, or resources would accelerate your sales cycles?</small></li>
+                        
+                        <li><strong>Success Stories & Best Practices</strong><br>
+                        <small>Share wins, lessons learned, or effective strategies</small></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button class="btn" id="prevBtn" onclick="changeSlide(-1)">Previous</button>
+        <button class="btn" id="nextBtn" onclick="changeSlide(1)">Next</button>
+    </div>
+    
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('total-slides').textContent = totalSlides;
+        
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+            
+            // Update button states
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+        
+        function changeSlide(direction) {
+            if (direction === 1 && currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            } else if (direction === -1 && currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+            if (e.key === ' ') {
+                e.preventDefault();
+                changeSlide(1);
+            }
+        });
+        
+        // Initialize
+        showSlide(0);
+        
+        // Smooth hover animations
+        document.querySelectorAll('.feature-card, .support-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
