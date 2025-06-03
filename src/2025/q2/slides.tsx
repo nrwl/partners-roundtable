@@ -17,6 +17,14 @@ export const slides: Slide[] = [
     </>
     },
     {slideIndex: 3, slide: <>
+        <h2>Hashbrown.io</h2>
+        <p>A framework for building joyful, AI-powered user experiences</p>
+        <a href="https://hashbrown.dev" target="_blank">
+        <img src="hashbrown.png" alt="Hashbrown.io" style={{width: '100%', height: 'auto'}} />
+        </a>
+    </>
+    },
+    {slideIndex: 4, slide: <>
         <h2>Product Updates & Roadmap</h2>
         <p>Key developments that strengthen our value proposition</p>
         
@@ -24,6 +32,10 @@ export const slides: Slide[] = [
             <div className="feature-card">
                 <h3>Nx 21</h3>
                 <p>Latest innovations in developer experience with Continuous Tasks and Terminal UI improvements</p>
+            </div>
+            <div className="feature-card">
+                <h3>Nx for Java</h3>
+                <p>The Nx Plugin for Java integrates seamlessly with your existing Gradle builds, adding powerful capabilities to your workflow</p>
             </div>
             <div className="feature-card">
                 <h3>Polyrepo Features</h3>
@@ -34,14 +46,6 @@ export const slides: Slide[] = [
                 <p>Critical CVE vulnerability addressed in self-hosted remote cache systems</p>
             </div>
         </div>
-    </>
-    },
-    {slideIndex: 4, slide: <>
-     <h2>Hashbrown.io</h2>
-     <p>A framework for building joyful, AI-powered user experiences</p>
-     <a href="https://hashbrown.dev" target="_blank">
-     <img src="hashbrown.png" alt="Hashbrown.io" style={{width: '100%', height: 'auto'}} />
-     </a>
     </>
     },
     {slideIndex: 5, slide: <>
@@ -70,8 +74,38 @@ export const slides: Slide[] = [
         <img src="tui-help.png" alt="Terminal UI Screenshot" style={{width: '90%', height: 'auto', margin: '0 auto', display: 'block'}} />
     </>
     },
-        
-    {slideIndex: 6, slide:<>
+    {slideIndex: 6, slide: <>
+        <h2>Supercharge Your Java Projects</h2>
+        <p>Get distributed tasks, intelligent caching, and target affected packages to optimize your build process and CI pipeline. Support for Gradle and Maven (coming soon)</p>
+        <div className="feature-grid">
+            <div className="feature-card">
+                <h3>Task Caching</h3>
+                <p>Cache task results locally and remotely, avoiding redundant builds and speeding up your development workflow.</p>
+            </div>
+            <div className="feature-card">
+                <h3>Distributed Task Execution</h3>
+                <p>Run your project tasks across multiple machines, dramatically reducing build times for large repositories.</p>
+            </div>
+            <div className="feature-card">
+                <h3>Affected Targets</h3>
+                <p>Run tasks only on projects affected by your changes, saving time and computing resources.</p>
+            </div>
+            <div className="feature-card">
+                <h3>Project Graph</h3>
+                <p>Nx automatically infers your project graph from project's configuration, providing visualization and dependency analysis.</p>
+            </div>
+            <div className="feature-card">
+                <h3>Split E2E Tests</h3>
+                <p>Automatically split your E2E tests for faster parallel execution in CI environments with Atomizer.</p>
+            </div>
+            <div className="feature-card">
+                <h3>Zero Configuration</h3>
+                <p>Add Nx to your project in minutes with no changes to your existing setup required.</p>
+            </div>
+        </div>
+    </>
+    }, 
+    {slideIndex: 7, slide:<>
         <h2>Security Update</h2>
         <div className="security-alert">
             <h3>CVE Security Update</h3>
@@ -94,7 +128,7 @@ export const slides: Slide[] = [
 
     </>
     },
-    {slideIndex: 7, slide: <>
+    {slideIndex: 8, slide: <>
     <h2>Security Update</h2>
     <p>Nx Cloud's architecture <strong>eliminates the race condition vulnerability</strong> by creating a trusted
     pathway for artifact generation by using a middleware that allows for scoped hashing.</p>
@@ -113,7 +147,7 @@ sophisticated token invalidation mechanism
     <img src="nx-tiered-caching.png" alt="Nx Cloud Tiered Caching Diagram" style={{width: '50%', height: 'auto', margin: '0 auto', display: 'block'}} />
     </>
     },
-    {slideIndex: 8, slide: <>
+        {slideIndex: 9, slide: <>
         <h2>New Polyrepo Features</h2>
         <p>Expanding beyond monorepos to meet teams where they are</p>
         
@@ -123,7 +157,7 @@ sophisticated token invalidation mechanism
         </div>
     </>
     },
-    {slideIndex: 9, slide: <>
+    {slideIndex: 10, slide: <>
      <h2>How We Can Support You</h2>
         <p>Concrete ways we're expanding partner enablement</p>
         
@@ -157,7 +191,7 @@ sophisticated token invalidation mechanism
         </div>
     </>
     },
-    {slideIndex: 10, slide: <>
+    {slideIndex: 11, slide: <>
         <h2>Discussion: Sales Challenges</h2>
         <p>Let's identify where we can better support your efforts</p>
         
@@ -181,7 +215,7 @@ sophisticated token invalidation mechanism
         </div>
     </>
     },
-    {slideIndex: 11, slide: <>
+    {slideIndex: 12, slide: <>
         <h2>Open Q&A & Feedback</h2>
         <p>Your insights drive our roadmap and partnership strategy</p>
         
