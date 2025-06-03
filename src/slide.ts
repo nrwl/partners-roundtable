@@ -1,0 +1,1 @@
+export type Slide = {slideIndex: number, slide: JSX.Element}
