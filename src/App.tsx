@@ -5,7 +5,7 @@ import { slides } from './2025/q2/slides';
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 8;
+  const totalSlides = slides.length;
 
   const handleNextSlide = () => {
     if (currentSlide < totalSlides) {

@@ -30,9 +30,15 @@ export const slides: Slide[] = [
     </>
     },
     {slideIndex: 3, slide: <>
+     <h2>Hashbrown.io</h2>
+     <p>A framework for building joyful, AI-powered user experiences</p>
+     <a href="https://hashbrown.dev" target="_blank">
+     <img src="hashbrown.png" alt="Hashbrown.io" style={{width: '100%', height: 'auto'}} />
+     </a>
+    </>
+    },
+    {slideIndex: 4, slide: <>
         <h2>Nx 21 Highlights</h2>
-        <p>Game-changing features for enterprise development teams</p>
-        
         <div className="two-column">
             <div>
                 <h3>Continuous Tasks</h3>
@@ -53,17 +59,13 @@ export const slides: Slide[] = [
                 </ul>
             </div>
         </div>
-        
-        <div className="highlight-box">
-            <p><strong>Business Impact:</strong> Measurable improvements in developer velocity and satisfaction, leading to faster time-to-market for customer projects</p>
-        </div>
+
+        <img src="tui-help.png" alt="Terminal UI Screenshot" style={{width: '90%', height: 'auto', margin: '0 auto', display: 'block'}} />
     </>
     },
         
-    {slideIndex: 4, slide:<>
+    {slideIndex: 5, slide:<>
         <h2>Security Update</h2>
-        <p>Demonstrating our commitment to enterprise security standards</p>
-        
         <div className="security-alert">
             <h3>CVE Security Update</h3>
             <p>We've proactively addressed a critical vulnerability in self-hosted remote cache systems. This demonstrates our commitment to enterprise security standards and rapid response to potential threats.</p>
@@ -71,16 +73,40 @@ export const slides: Slide[] = [
                 🎥 Watch Technical Breakdown
             </a>
         </div>
-        
-        <div className="highlight-box">
-            <h3>Key Points for Customers</h3>
-            <ul>
-                <li>TODO</li>
-            </ul>
-        </div>
+
+        <h3>How it works</h3>
+        <ol style={{marginLeft: '20px'}}>
+            <li>A change is merged into the main branch requiring a rebuild.</li>
+            <li>The attacker immediately branches from main.</li>
+            <li>The attacker modifies the CI configuration to monkey-patch the build tool (bundler, compiler) creating a poisoned artifact.</li>
+            <li>The attacker simplifies the CI configuration ensuring the build runs before other verification steps.</li>
+            <li>When the attacker opens a PR, their build process creates a poisoned artifact and uploads it to the cache.</li>
+            <li>Since this artifact is associated with the same source file state as the pending build in main, the main branch pipeline uses that artifact instead of rebuilding it.</li>
+            <li>Instead of building fresh, the main branch downloads the poisoned artifact from the cache and deploys it to production environments</li>
+        </ol>
+
     </>
     },
-    {slideIndex: 5, slide: <>
+    {slideIndex: 6, slide: <>
+    <h2>Security Update</h2>
+    <p>Nx Cloud's architecture <strong>eliminates the race condition vulnerability</strong> by creating a trusted
+    pathway for artifact generation by using a middleware that allows for scoped hashing.</p>
+    <p>Nx Cloud implements:<br />
+    <strong>Two-Tier Caching System:</strong> a privilege-based caching hierarchy:</p>
+    <ul>
+        <li><strong>Trusted groups</strong>: Can read from & write to the shared cache (e.g. main branch)</li>
+        <li><strong>Untrusted groups</strong>: Can read from the shared/trusted cache, but can only write to their own isolated branch-scoped caches</li>
+    </ul>
+    <p>
+    <strong>Version Control System Integration:</strong> Nx Cloud integrates with version control system
+providers to enforce proper cache scoping<br />
+<strong>Fine-grained access controls:</strong> Control access down to the developer level with
+sophisticated token invalidation mechanism
+    </p>
+    <img src="nx-tiered-caching.png" alt="Nx Cloud Tiered Caching Diagram" style={{width: '50%', height: 'auto', margin: '0 auto', display: 'block'}} />
+    </>
+    },
+    {slideIndex: 7, slide: <>
         <h2>New Polyrepo Features</h2>
         <p>Expanding beyond monorepos to meet teams where they are</p>
         
@@ -90,7 +116,7 @@ export const slides: Slide[] = [
         </div>
     </>
     },
-    {slideIndex: 6, slide: <>
+    {slideIndex: 8, slide: <>
      <h2>How We Can Support You</h2>
         <p>Concrete ways we're expanding partner enablement</p>
         
@@ -124,7 +150,7 @@ export const slides: Slide[] = [
         </div>
     </>
     },
-    {slideIndex: 7, slide: <>
+    {slideIndex: 9, slide: <>
         <h2>Discussion: Sales Challenges</h2>
         <p>Let's identify where we can better support your efforts</p>
         
@@ -148,7 +174,7 @@ export const slides: Slide[] = [
         </div>
     </>
     },
-    {slideIndex: 8, slide: <>
+    {slideIndex: 10, slide: <>
         <h2>Open Q&A & Feedback</h2>
         <p>Your insights drive our roadmap and partnership strategy</p>
         
