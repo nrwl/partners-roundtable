@@ -5,11 +5,18 @@ export const slides: Slide[] = [
         <h1>Nx Partners Roundtable</h1>
         <div className="highlight-box">
             <h3>Today's Focus</h3>
-            <p>Product updates, partnership strategies, collect feedback</p>
+            <p>Product updates, hashbrown demo, partnership strategies, collect feedback</p>
         </div>
     </>
     },
     {slideIndex: 2, slide: <>
+    <h2>New Nx Partners Page</h2>
+    <a href="https://nx.dev/partners" target="_blank">
+        <img src="partners-page.png" alt="Nx Partners Page" style={{width: '80%', height: 'auto', margin: '0 auto', display: 'block'}} />
+    </a>
+    </>
+    },
+    {slideIndex: 3, slide: <>
         <h2>Product Updates & Roadmap</h2>
         <p>Key developments that strengthen our value proposition</p>
         
@@ -29,7 +36,7 @@ export const slides: Slide[] = [
         </div>
     </>
     },
-    {slideIndex: 3, slide: <>
+    {slideIndex: 4, slide: <>
      <h2>Hashbrown.io</h2>
      <p>A framework for building joyful, AI-powered user experiences</p>
      <a href="https://hashbrown.dev" target="_blank">
@@ -37,7 +44,7 @@ export const slides: Slide[] = [
      </a>
     </>
     },
-    {slideIndex: 4, slide: <>
+    {slideIndex: 5, slide: <>
         <h2>Nx 21 Highlights</h2>
         <div className="two-column">
             <div>
@@ -64,7 +71,7 @@ export const slides: Slide[] = [
     </>
     },
         
-    {slideIndex: 5, slide:<>
+    {slideIndex: 6, slide:<>
         <h2>Security Update</h2>
         <div className="security-alert">
             <h3>CVE Security Update</h3>
@@ -87,7 +94,7 @@ export const slides: Slide[] = [
 
     </>
     },
-    {slideIndex: 6, slide: <>
+    {slideIndex: 7, slide: <>
     <h2>Security Update</h2>
     <p>Nx Cloud's architecture <strong>eliminates the race condition vulnerability</strong> by creating a trusted
     pathway for artifact generation by using a middleware that allows for scoped hashing.</p>
@@ -106,7 +113,7 @@ sophisticated token invalidation mechanism
     <img src="nx-tiered-caching.png" alt="Nx Cloud Tiered Caching Diagram" style={{width: '50%', height: 'auto', margin: '0 auto', display: 'block'}} />
     </>
     },
-    {slideIndex: 7, slide: <>
+    {slideIndex: 8, slide: <>
         <h2>New Polyrepo Features</h2>
         <p>Expanding beyond monorepos to meet teams where they are</p>
         
@@ -116,7 +123,7 @@ sophisticated token invalidation mechanism
         </div>
     </>
     },
-    {slideIndex: 8, slide: <>
+    {slideIndex: 9, slide: <>
      <h2>How We Can Support You</h2>
         <p>Concrete ways we're expanding partner enablement</p>
         
@@ -150,7 +157,7 @@ sophisticated token invalidation mechanism
         </div>
     </>
     },
-    {slideIndex: 9, slide: <>
+    {slideIndex: 10, slide: <>
         <h2>Discussion: Sales Challenges</h2>
         <p>Let's identify where we can better support your efforts</p>
         
@@ -174,7 +181,7 @@ sophisticated token invalidation mechanism
         </div>
     </>
     },
-    {slideIndex: 10, slide: <>
+    {slideIndex: 11, slide: <>
         <h2>Open Q&A & Feedback</h2>
         <p>Your insights drive our roadmap and partnership strategy</p>
         
