@@ -149,12 +149,9 @@ sophisticated token invalidation mechanism
     },
         {slideIndex: 9, slide: <>
         <h2>New Polyrepo Features</h2>
-        <p>Expanding beyond monorepos to meet teams where they are</p>
+        <p>Designed to give customers visibility and enforce coding and security standards across your entire technical organization.</p>
         
-        <div className="highlight-box">
-            <h3>Market Opportunity</h3>
-            <p>Supporting teams who aren't ready for full monorepo adoption but want to benefit from Nx tooling and CI optimization</p>
-        </div>
+        <img src="polygraph.png" alt="Polygraph" style={{width: '75%', height: 'auto', margin: '0 auto', display: 'block'}} />
     </>
     },
     {slideIndex: 10, slide: <>
@@ -163,35 +160,72 @@ sophisticated token invalidation mechanism
         
         <div className="support-grid">
             <div className="support-card">
-                <h4>Strategy Sessions</h4>
-                <p>Joint customer meetings, insights sharing, and experience exchange for complex deals</p>
+                <h4>Overview of Nx</h4>
+                <ul style={{ textAlign: 'left' }}>
+                    <li>On build, test, list only what changed</li>
+                    <li>Cache the work you do</li>
+                    <li>Explore and organize your workspace</li>
+                    <li>Automate updates and migrations</li>
+                </ul>
             </div>
             <div className="support-card">
-                <h4>Technical Demos</h4>
-                <p>Nx team-led Nx Cloud demonstrations for qualified prospects</p>
+                <h4>Overview of Nx Cloud</h4>
+                <ul style={{ textAlign: 'left' }}>
+                    <li>Secure remote cache</li>
+                    <li>Intelligent task distribution for speed and scale</li>
+                    <li>Power your AI coding assistants</li>
+                </ul>
             </div>
             <div className="support-card">
-                <h4>POV Process</h4>
-                <p>Structured proof-of-value approach for customers with defined pain points</p>
+                <h4>Remote sessions with your customer</h4>
+                <ul style={{ textAlign: 'left' }}>
+                    <li>Discuss their Nx and monorepo strategy</li>
+                    <li>Considerations on how to organize worksapces</li>
+                    <li>When to implement MFE</li>
+                    <li>Colocating front and backend projects</li>
+                    <li>More</li>
+                </ul>
             </div>
-        </div>
-        
-        <div className="incentives-section">
-            <h3>New Partnership Opportunities</h3>
-            <div className="incentive-items">
-                <div className="incentive-item">
-                    <h4>Enhanced Commission Incentives</h4>
-                    <p>Improved partner reward structure for Nx Cloud deals</p>
-                </div>
-                <div className="incentive-item">
-                    <h4>Internal Nx Cloud Accounts</h4>
-                    <p>Free accounts for your team projects (rolling out over the next few weeks)</p>
-                </div>
-            </div>
+            
         </div>
     </>
     },
     {slideIndex: 11, slide: <>
+        <h2>How We Can Support You Continued</h2>
+        <div className="support-grid">
+            <div className="support-card">
+                <h4>Onsite workshops</h4>
+                <ul style={{ textAlign: 'left' }}>
+                    <li>We'll spend the day onsite with you and your customer with a customized demo + hands-on experience</li>
+                </ul>
+            </div>
+            <div className="support-card">
+                <h4>Guided Nx Enterprise Trials</h4>
+                <ul style={{ textAlign: 'left' }}>
+                    <li>2 weeks unrestricted trial of Nx Enterprise</li>
+                    <li>Single-tenant deployment of Nx Cloud</li>
+                    <li>Help your customer connect and optimize their CI</li>
+                    <li>Capture before and after metrics to show ROI</li>
+                </ul>
+            </div>
+        </div>
+    </>
+    },
+    { slideIndex: 12, slide: <>
+        <h2>New Partnership Benefits</h2>
+        <div className="incentive-items">
+            <div className="incentive-item">
+                <h4>Enhanced Commission Incentives</h4>
+                <p>Improved partner reward structure for Nx Cloud deals</p>
+            </div>
+            <div className="incentive-item">
+                <h4>Internal Nx Cloud Accounts</h4>
+                <p>Free accounts for your team projects</p>
+            </div>
+        </div>
+    </>
+    }, 
+    {slideIndex: 13, slide: <>
         <h2>Discussion: Sales Challenges</h2>
         <p>Let's identify where we can better support your efforts</p>
         
@@ -215,7 +249,7 @@ sophisticated token invalidation mechanism
         </div>
     </>
     },
-    {slideIndex: 12, slide: <>
+    {slideIndex: 14, slide: <>
         <h2>Open Q&A & Feedback</h2>
         <p>Your insights drive our roadmap and partnership strategy</p>
         
