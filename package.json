@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "vite-plugin-zephyr": "0.0.0-canary-20250603193009"
+    "vite-plugin-zephyr": "^0.0.51"
   },
   "devDependencies": {
     "@types/react": "^18.3.20",
