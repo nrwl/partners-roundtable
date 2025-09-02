@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { Slides } from './Slides';
-import { slides } from './2025/q2/slides';
+import { slides } from './2025/q3/slides';
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(1);
