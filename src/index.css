@@ -24,7 +24,7 @@ body {
 
 .slide {
     display: none;
-    width: 90%;
+    width: 80%;
     max-width: 1200px;
     height: 85vh;
     padding: 60px 80px;
@@ -113,7 +113,7 @@ body {
     margin: 1.5rem 0;
 }
 
-.feature-card {
+.feature-card, .steps-card {
     background: #f8fafc;
     border: 2px solid #e2e8f0;
     border-radius: 8px;
@@ -121,22 +121,27 @@ body {
     transition: all 0.2s ease;
 }
 
-.feature-card:hover {
+.feature-card:hover, .steps-card:hover {
     border-color: #0891b2;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(8, 145, 178, 0.1);
 }
 
-.feature-card h3 {
+.feature-card h3, .steps-card h4 {
     color: #143055;
     margin-bottom: 0.75rem;
     font-size: 1.25rem;
 }
 
-.feature-card p {
+.feature-card p, .steps-card p {
     color: #475569;
     font-size: 1rem;
     margin-bottom: 0;
+}
+
+.steps-card {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .highlight-box {
@@ -219,7 +224,7 @@ body {
 
 .controls {
     position: fixed;
-    bottom: 2rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;

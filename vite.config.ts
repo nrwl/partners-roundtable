@@ -8,6 +8,6 @@ export default defineConfig({
   plugins: [
     react(),
     Inspect({ build: true, outputDir: 'dist/.vite-inspect' }),
-    withZephyr(),
+    withZephyr()
   ],
 });
