@@ -73,46 +73,44 @@ export const slides: Slide[] = [
                 🔗 Complete Security Checklist
             </a>
             
-            <div className="feature-grid">
-                <div className="feature-card">
-                    <h4>Step 1: Verify Impact</h4>
-                    <ul>
-                        <li>Check GitHub security log for suspicious repositories</li>
-                        <li>Look for `/tmp/inventory.txt` on your system</li>
-                        <li>Check shell configs for malicious commands</li>
-                    </ul>
-                </div>
-                <div className="feature-card">
-                    <h4>Step 2: Rotate Credentials</h4>
-                    <ul>
-                        <li>Revoke GitHub CLI access</li>
-                        <li>Refresh all GitHub tokens</li>
-                        <li>Check 3rd party service permissions</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </>
-    },
-    {slideIndex: 6, slide: <>
-        <h2>Security Remediation Steps (Continued)</h2>
-        <div className="action-section">
-            <div className="feature-grid">
-                <div className="feature-card">
-                    <h4>Step 3: Clean Caches</h4>
-                    <ul>
-                        <li>Clean yarn, pnpm, and npm caches</li>
-                        <li>Remove NPX cache folders</li>
-                        <li>Purge internal registry mirrors</li>
-                    </ul>
-                </div>
-                <div className="feature-card">
-                    <h4>Step 4: Update Nx</h4>
-                    <ul>
-                        <li>Install latest secure Nx versions</li>
-                        <li>Update all affected dependencies</li>
-                        <li>Verify clean installations</li>
-                    </ul>
+            <div className="steps-card">
+                <div className="two-column">
+                    <div className="column">
+                        <div className="step-item">
+                            <h4>Step 1: Verify Impact</h4>
+                            <ul>
+                                <li>Check GitHub security log for suspicious repositories</li>
+                                <li>Look for `/tmp/inventory.txt` on your system</li>
+                                <li>Check shell configs for malicious commands</li>
+                            </ul>
+                        </div>
+                        <div className="step-item">
+                            <h4>Step 2: Rotate Credentials</h4>
+                            <ul>
+                                <li>Revoke GitHub CLI access</li>
+                                <li>Refresh all GitHub tokens</li>
+                                <li>Check 3rd party service permissions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <div className="step-item">
+                            <h4>Step 3: Clean Caches</h4>
+                            <ul>
+                                <li>Clean yarn, pnpm, and npm caches</li>
+                                <li>Remove NPX cache folders</li>
+                                <li>Purge internal registry mirrors</li>
+                            </ul>
+                        </div>
+                        <div className="step-item">
+                            <h4>Step 4: Update Nx</h4>
+                            <ul>
+                                <li>Install latest secure Nx versions</li>
+                                <li>Update all affected dependencies</li>
+                                <li>Verify clean installations</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -123,7 +121,7 @@ export const slides: Slide[] = [
         </div>
     </>
     },
-    {slideIndex: 7, slide: <>
+    {slideIndex: 6, slide: <>
         <h2>AI Self-Healing CI</h2>
         <div className="ai-intro">
             <h3>Revolutionary CI Automation</h3>
@@ -131,34 +129,28 @@ export const slides: Slide[] = [
         </div>
         
         <div className="flowchart-section">
-            <img src="/src/assets/self-healing-ci.png" alt="Self-Healing CI Process Flow" style={{width: '80%', height: 'auto', margin: '20px auto', display: 'block'}} />
+            <img src="https://nx.dev/documentation/blog/images/articles/self-healing-flow.avif" alt="Self-Healing CI Process Flow" style={{width: '80%', height: 'auto', margin: '20px auto', display: 'block'}} />
+        </div>
+    </>
+    },
+    {slideIndex: 7, slide: <>
+        <h2>Self-Healing CI: The Value</h2>
+        <div className="metrics-section">
+            <h3>Promising Early Results</h3>
+            <div className="feature-grid">
+                <div className="feature-card">
+                    <h4>Reduction in Time to Green</h4>
+                    <p>We've seen 50% reduction in time to green across our Nx Repos.</p>
+                </div>
+                <div className="feature-card">
+                    <h4>Time Saved</h4>
+                    <p>We see 1 hour of dev time saved on every PR on average.</p>
+                </div>
+            </div>
         </div>
     </>
     },
     {slideIndex: 8, slide: <>
-        <h2>Self-Healing CI: The Value</h2>
-        <div className="metrics-section">
-            <h3>Proven Impact</h3>
-            <div className="metric-grid">
-                <div className="metric-card">
-                    <h4>Reduction</h4>
-                    <p>in manual CI intervention time</p>
-                </div>
-                <div className="metric-card">
-                    <h4>Success Rate</h4>
-                    <p>in automatic failure resolution</p>
-                </div>
-                <div className="metric-card">
-                    <h4>Faster</h4>
-                    <p>time to resolution for common issues</p>
-                </div>
-            </div>
-            
-            <p><em>Based on internal metrics from teams using self-healing CI in production</em></p>
-        </div>
-    </>
-    },
-    {slideIndex: 9, slide: <>
         <h2>How Self-Healing CI Works</h2>
         <div className="how-it-works">
             <h3>Intelligent Problem Detection & Resolution</h3>
@@ -172,7 +164,7 @@ export const slides: Slide[] = [
         </div>
     </>
     },
-    {slideIndex: 10, slide: <>
+    {slideIndex: 9, slide: <>
         <h2>Common Issues Self-Healing CI Fixes</h2>
         <div className="issues-section">
             <div className="feature-grid">
@@ -196,7 +188,7 @@ export const slides: Slide[] = [
         </div>
     </>
     },
-    {slideIndex: 11, slide: <>
+    {slideIndex: 10, slide: <>
         <h2>Enable Self-Healing CI</h2>
         <div className="enablement-section">
             <h3>Getting Started</h3>
@@ -222,107 +214,73 @@ export const slides: Slide[] = [
         </div>
     </>
     },
-    {slideIndex: 12, slide: <>
+    {slideIndex: 11, slide: <>
         <h2>Partner Feedback Session</h2>
         
         <div className="feedback-section">
             <div className="discussion-grid">
                 <div className="discussion-card">
-                    <p><strong>What would make you more likely to try Nx Cloud?</strong></p>
                     <ul>
-                        <li>Pricing concerns?</li>
-                        <li>Technical barriers?</li>
-                        <li>Integration challenges?</li>
+                        <li><strong>Are there any customer interactions related to the security incident you'd like to share? Concerns you addressed or have been unable to?</strong></li>
+                        <li><strong>How are your customers using AI to improve DX and ship faster?</strong></li>
+                        <li><strong>Interesting problems you've solved for customers using Nx?</strong></li>
+                        <li><strong>What challenges do you face helping customers adopt Nx?</strong></li>
+                        <li><strong>What challenges do you face helping customer adopt Nx Cloud?</strong></li>
+                        <li><strong>What strategies, resources, have you used when helping a customer adopt Nx and Nx Cloud?</strong></li>
                     </ul>
                 </div>
-                <div className="discussion-card">
-                    <p><strong>What challenges do you face most often?</strong></p>
-                    <ul>
-                        <li>Customer objections?</li>
-                        <li>Technical complexity?</li>
-                        <li>Competition concerns?</li>
-                    </ul>
+            </div>
+        </div>
+    </>
+    },
+    {slideIndex: 12, slide: <>
+        <h2>Open Q&A & Discussion</h2>
+        <p>Let's address your questions and gather feedback to improve our partnership</p>
+        
+        <div className="qa-section">
+            <h3>Discussion Topics</h3>
+            <div className="two-column">
+                <div className="column">
+                    <div className="qa-card">
+                        <h4>Product & Features</h4>
+                        <ul>
+                            <li>Missing features that would help close deals?</li>
+                            <li>Roadmap priorities and timing?</li>
+                            <li>Technical capabilities needed?</li>
+                        </ul>
+                    </div>
+                    <div className="qa-card">
+                        <h4>Partnership Program</h4>
+                        <ul>
+                            <li>Support improvements needed?</li>
+                            <li>Training and enablement gaps?</li>
+                            <li>Incentive structure feedback?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="column">
+                    <div className="qa-card">
+                        <h4>Sales & Marketing</h4>
+                        <ul>
+                            <li>Collateral and resources needed?</li>
+                            <li>Competitive positioning help?</li>
+                            <li>Customer success stories?</li>
+                        </ul>
+                    </div>
+                    <div className="qa-card">
+                        <h4>Technical Support</h4>
+                        <ul>
+                            <li>Implementation challenges?</li>
+                            <li>Training needs?</li>
+                            <li>Documentation gaps?</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </>
     },
     {slideIndex: 13, slide: <>
-        <h2>Partner Feedback Session (Continued)</h2>
-        <div className="feedback-section">
-            <div className="discussion-grid">
-                <div className="discussion-card">
-                    <p><strong>What strategies are most effective?</strong></p>
-                    <ul>
-                        <li>Successful sales approaches?</li>
-                        <li>Helpful resources?</li>
-                        <li>Partner support?</li>
-                    </ul>
-                </div>
-                <div className="discussion-card">
-                    <p><strong>Share your wins and lessons learned</strong></p>
-                    <ul>
-                        <li>Customer success stories?</li>
-                        <li>Effective strategies?</li>
-                        <li>Best practices?</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </>
-    },
-    {slideIndex: 14, slide: <>
-        <h2>Open Q&A & Discussion</h2>
-        <p>Let's address your questions and gather feedback to improve our partnership</p>
-        
-        <div className="qa-section">
-            <h3>Discussion Topics</h3>
-            <div className="qa-grid">
-                <div className="qa-card">
-                    <h4>Product & Features</h4>
-                    <ul>
-                        <li>Missing features that would help close deals?</li>
-                        <li>Roadmap priorities and timing?</li>
-                        <li>Technical capabilities needed?</li>
-                    </ul>
-                </div>
-                <div className="qa-card">
-                    <h4>Partnership Program</h4>
-                    <ul>
-                        <li>Support improvements needed?</li>
-                        <li>Training and enablement gaps?</li>
-                        <li>Incentive structure feedback?</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </>
-    },
-    {slideIndex: 15, slide: <>
-        <h2>Open Q&A & Discussion (Continued)</h2>
-        <div className="qa-section">
-            <div className="qa-grid">
-                <div className="qa-card">
-                    <h4>Sales & Marketing</h4>
-                    <ul>
-                        <li>Collateral and resources needed?</li>
-                        <li>Competitive positioning help?</li>
-                        <li>Customer success stories?</li>
-                    </ul>
-                </div>
-                <div className="qa-card">
-                    <h4>Technical Support</h4>
-                    <ul>
-                        <li>Implementation challenges?</li>
-                        <li>Training needs?</li>
-                        <li>Documentation gaps?</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </>
-    },
-    {slideIndex: 16, slide: <>
         <h2>Next Steps & Follow-up</h2>
         <div className="next-steps">
             <h3>Immediate Actions</h3>
@@ -339,7 +297,7 @@ export const slides: Slide[] = [
         </div>
     </>
     },
-    {slideIndex: 17, slide: <>
+    {slideIndex: 14, slide: <>
         <h2>Ongoing Support</h2>
         <div className="next-steps">
             <h3>Continued Partnership</h3>
